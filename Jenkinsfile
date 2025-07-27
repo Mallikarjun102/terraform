@@ -28,8 +28,8 @@ pipeline {
 
         stage('Terraform Apply') {
             steps {
-                input message: 'Approve to apply Terraform plan?'
-                sh 'terraform apply tfplan'
+                input message: 'Approve to apply'
+                sh 'terraform apply -auto-approve'
             }
         }
     }
